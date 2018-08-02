@@ -27,8 +27,8 @@ public class Triangle implements Shape {
     public Triangle(Point p, ArrayList<Integer> parameter, Timestamp timestamp) {
 
         this.origin = origin;
-        this.height = height;
-        this.base = base;
+        height = parameter.get(0);
+        base = parameter.get(1);
         this.timeStamp = timestamp;
     }
 
