@@ -1,6 +1,8 @@
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
+import java.util.NoSuchElementException;
+
+import org.junit.Test;
 
 class QueueByLinkListTest {
 
@@ -22,7 +24,7 @@ class QueueByLinkListTest {
         assertSame(2, object.deQueue());
     }
 
-    @Test // (expected = NoSuchElementException.class)
+    @Test  (expected = NoSuchElementException.class)
     public void deQueueTestNegative() {
         QueueInterface<Integer> object = new QueueByLinkList<Integer>();
         for (int i = 0; i < 3; i++) {
@@ -61,10 +63,10 @@ class QueueByLinkListTest {
         assertEquals(false, checkFull1);
     }
 
-    @Test // (expected = AssertionError.class)
+    @Test  (expected = AssertionError.class)
     public void frontTest() {
         QueueInterface<Integer> object = new QueueByLinkList<Integer>();
-        // assertSame(3, object.frontElement());
+         assertSame(3, object.frontElement());
 
         for (int i = 0; i < 3; i++) {
             object.enqueue(i + 1);
