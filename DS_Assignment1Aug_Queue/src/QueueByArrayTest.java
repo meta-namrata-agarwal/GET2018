@@ -1,8 +1,8 @@
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 import java.util.NoSuchElementException;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 class QueueByArrayTest {
 
@@ -32,7 +32,7 @@ class QueueByArrayTest {
         assertSame(2, object.deQueue());
     }
 
-    @Test // (expected = NoSuchElementException.class)
+    @Test  (expected = NoSuchElementException.class)
     public void deQueueTestNegative() {
         QueueInterface<Integer> object = new QueueByArray<>(3);
         for (int i = 0; i < 3; i++) {
@@ -73,10 +73,10 @@ class QueueByArrayTest {
         assertEquals(false, checkFull1);
     }
 
-    @Test // (expected = AssertionError.class)
+    @Test (expected = AssertionError.class)
     public void frontTest() {
         QueueInterface<Integer> object = new QueueByArray<>(3);
-       // assertSame(3, object.frontElement());
+        assertSame(3, object.frontElement());
 
         for (int i = 0; i < 3; i++) {
             object.enqueue(i + 1);
