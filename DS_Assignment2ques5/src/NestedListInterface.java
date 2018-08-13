@@ -1,8 +1,13 @@
 
+/**
+ * 
+ * @author User20
+ *
+ */
 public interface NestedListInterface {
-    public Long sumOfIntegerInList();
+    public int sumOfIntegerInList();
 
-    public Long largestValue();
+    public int largestValue();
 
     public boolean searchValue(int value);
 
