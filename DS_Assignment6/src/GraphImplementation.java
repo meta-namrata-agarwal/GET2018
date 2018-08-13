@@ -1,6 +1,7 @@
 import java.util.*;
 
 /**
+ * graph implementation
  * 
  * @author Namrata Agarwal
  *
@@ -23,6 +24,13 @@ public class GraphImplementation implements UndirectedWeightedGraph {
         }
     }
 
+    /**
+     * method to add edges to the graph
+     * 
+     * @param source
+     * @param destination
+     * @param weight
+     */
     public void createGraph(int source, int destination, int weight) {
         Edge edge = new Edge(source, destination, weight);
         adjacencyMatrix[source].add(destination);
@@ -30,12 +38,18 @@ public class GraphImplementation implements UndirectedWeightedGraph {
         edgeList.add(edge);
     }
 
+    /**
+     * method to check whether graph is connected or not
+     */
     @Override
     public boolean isConnected() {
         reachNode = new LinkedList<>();
         return DFS(3);
     }
 
+    /**
+     * method to return all reachable nodes
+     */
     @Override
     public List<Integer> reachable(int vertex) {
         reachNode = new LinkedList<>();
@@ -44,6 +58,12 @@ public class GraphImplementation implements UndirectedWeightedGraph {
         return reachNode;
     }
 
+    /**
+     * private method for DFS
+     * 
+     * @param sourceVertices
+     * @return
+     */
     private boolean DFS(int sourceVertices) {
         boolean visited[] = new boolean[vertices];
         for (int i = 0; i < vertices; i++) {
@@ -58,6 +78,12 @@ public class GraphImplementation implements UndirectedWeightedGraph {
         return true;
     }
 
+    /**
+     * helper method for DFS
+     * 
+     * @param source
+     * @param visited
+     */
     private void DFSUtility(int source, boolean visited[]) {
         System.out.println(source);
         reachNode.add(source);
@@ -70,6 +96,9 @@ public class GraphImplementation implements UndirectedWeightedGraph {
         }
     }
 
+    /**
+     * method to find the mst by prims algorithm
+     */
     @Override
     public List<Edge> mst() {
         Set<Integer> visitedVertexSet = new HashSet<Integer>();
@@ -81,7 +110,7 @@ public class GraphImplementation implements UndirectedWeightedGraph {
             listOfVisitedEdge.add(edgeList.get(0));
             visitedVertexSet.add(edgeList.get(0).getSource());
             visitedVertexSet.add(edgeList.get(0).getDestination());
-        
+
             int i = 1;
             while (visitedVertexSet.size() != vertices && i < edgeList.size()) {
                 Edge edge = edgeList.get(i);
@@ -90,18 +119,18 @@ public class GraphImplementation implements UndirectedWeightedGraph {
                     listOfVisitedEdge.add(edge);
                     visitedVertexSet.add(edge.getSource());
                     visitedVertexSet.add(edge.getDestination());
-                }
-                else {
+                } else {
                     if ((visitedVertexSet.contains(edge.getSource()))
-                            && (visitedVertexSet
-                                    .contains(edge.getDestination()))) {
+                            && (visitedVertexSet.contains(edge.getDestination()))) {
                         if (!(isCycle(listOfVisitedEdge, edge))) {
                             listOfVisitedEdge.add(edge);
                             visitedVertexSet.add(edge.getSource());
                             visitedVertexSet.add(edge.getDestination());
                         }
                     }
+
                 }
+
                 i++;
             }
         }
@@ -169,19 +198,24 @@ public class GraphImplementation implements UndirectedWeightedGraph {
     public static void main(String[] args) {
         GraphImplementation g = new GraphImplementation(4);
         g.createGraph(0, 1, 4);
-        //g.createGraph(0, 2, 3);
+        // g.createGraph(0, 2, 3);
         g.createGraph(2, 1, 5);
         g.createGraph(2, 3, 7);
-        //g.createGraph(1, 3, 2);
+        // g.createGraph(1, 3, 2);
         System.out.println(g.isConnected());
         System.out.println(g.reachable(2));
 
         List<Edge> list = g.mst();
         for (Edge e : list) {
-            System.out.println(e.getSource() + " " + e.getDestination() + " "
-                    + e.getWeight());
+            System.out.println(e.getSource() + " " + e.getDestination() + " " + e.getWeight());
         }
 
+    }
+
+    @Override
+    public int shortestPath(int vertex1, int vertex2) {
+        // TODO Auto-generated method stub
+        return 0;
     }
 
 }
