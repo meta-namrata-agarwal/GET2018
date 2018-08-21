@@ -14,12 +14,13 @@ Price float not null,
 Date_stock_added date,
 Description varchar(100)
 );
-
+ALTER TABLE PRODUCT
+ ADD COLUMN isActive TINYINT  NOT NULL;
 
 CREATE TABLE PRODUCT_IMAGE(
 Product_id INT NOT NULL,
 Image_id INT NOT NULL AUTO_INCREMENT,
-Image BLOB NOT NULL,
+Image VARCHAR(50) NOT NULL,
 PRIMARY KEY(Image_id),
 FOREIGN KEY(Product_id) REFERENCES Product(Product_id)
 );
