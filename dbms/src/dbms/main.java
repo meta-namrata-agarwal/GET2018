@@ -1,14 +1,14 @@
 package dbms;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
-        QueryClass qc = new QueryClass();
-        qc.orderDetailsByUserId(8);
+        QueryClass.orderDetailsByUserId(8);
 
         Image image1 = new Image(1, 6, "image1.jpg");
         Image image2 = new Image(1, 7, "image2.jpg");
@@ -21,11 +21,10 @@ public class main {
         list.add(image3);
         list.add(image4);
         list.add(image5);
-        //qc.batchInsertImage(list);
-        
-        qc.deleteProductsNotOrderedInYear();
-        
-        
+        QueryClass.batchInsertImage(list);
+
+        QueryClass.deleteProductsNotOrderedInYear();
+        QueryClass.categorySort();
 
     }
 
