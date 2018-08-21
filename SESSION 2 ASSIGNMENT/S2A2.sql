@@ -20,6 +20,9 @@ INSERT INTO Product (Product_id,Name,Stock,Price,Date_stock_added,Description)
 UPDATE Product
 SET Stock=Stock+40;
 
+UPDATE PRODUCT
+SET ISACTIVE=1;
+
 INSERT INTO Parent_Category(Category_id, Category_name,Parent_id,Parent_name)
 VALUES
 (1,'ELECTRONICS',0,'ELECTRONICS'),
