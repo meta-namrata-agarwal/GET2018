@@ -94,6 +94,7 @@ VALUES
 (14,15,CURDATE(),950,'JAIPUR'),
 (6,16,CURDATE(),150,'MUMBAI'),
 (11,17,CURDATE(),133,'DELHI');
+(20,19,2015-8-9,2000,'KANPUR');
 
 
 INSERT INTO Order_details(order_id,product_id,QUANTITY,ORDER_STATUS,PRICE)
@@ -103,6 +104,9 @@ VALUES
 (2,3,3,4,250),(2,1,1,1,350),(5,3,3,1,250),(5,5,2,3,350),(5,7,1,4,350),(6,3,3,1,250),(6,8,1,1,700),(7,8,1,2,700),
 (18,4,2,4,1570),(18,6,2,4,400),(11,1,2,4,350),(11,5,2,4,350),(12,4,1,4,1570),(15,11,1,4,15000),(16,8,2,4,700),
 (17,1,1,4,350);
+
+INSERT INTO Order_details(order_id,product_id,QUANTITY,ORDER_STATUS,PRICE)
+VALUES(19,3,2,1,200),(19,10,2,1,100);
 
 SELECT * FROM user
 LOAD DATA  INFILE 'C://Users//Admin//Downloads//userdata.txt' INTO TABLE user;
