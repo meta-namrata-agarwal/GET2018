@@ -130,7 +130,12 @@ public class QueryClass {
 
         query = "UPDATE PRODUCT P" + " INNER JOIN ORDER_deTAILS O" + " ON P.Product_id=O.Product_id"
                 + " INNER JOIN order_placed OP" + " ON OP.Order_id=O.Order_id" + " SET ISACTIVE=0"
-                + " WHERE  ISACTIVE = 1 AND DATEDIFF(NOW(), OP.Date_of_order)>365";
+                + " WHERE  ISACTIVE = 1 AND P.Product_id not in ("            
+                +" SELECT order_details.Product_id "
+                +" FROM order_details "
+                +" LEFT JOIN order_placed "
+                +" ON order_placed.Order_id=order_details.Order_id "
+                +" WHERE DATEDIFF(NOW(), order_placed.Date_of_order)<365)";
 
         try {
             conn = DBInfo1.getConn();
@@ -168,7 +173,8 @@ public class QueryClass {
         final String query;
         query = "SELECT a.parent_name AS'Top_Category', COUNT(b.category_id) AS 'Category_Count' "
                 + "FROM parent_category a " + "INNER JOIN  parent_category b " + "ON a.parent_id = b.category_id "
-                + "GROUP BY (b.category_id) " + "ORDER BY a.category_name,b.category_name";
+                +" where b.parent_id=0 "
+                + "GROUP BY (b.category_id) " + "ORDER BY a.parent_name";
 
         System.out.println(query);
         try {
