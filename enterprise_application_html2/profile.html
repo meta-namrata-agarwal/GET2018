@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML Assignment Session1</title>
+   <script src="signUPjavaScript.js"></script>	
+    <script src="edit.js"></script>	
+	<link rel="stylesheet"  href="SignUpCSS.css">		
+</head>
+<body>
+	<table id="header" width ="100%" align = "center">
+		<tr>
+			<td><img src="htmlLogo.png" width= "100px"/></td>
+			<td  align="right">
+                <h2> WELCOME,Namrata Agarwal</h2><a align="right" href= "home.html">Log Out</a> 
+			</td>
+		</tr>
+	</table>
+	<hr/>
+	<br/>
+	<form >
+        <table  align ="center">
+			<tr>
+				<td class="fieldName">First Name:</td>
+			</tr>
+			<tr>
+				<td class="inputCol" ><input type="text" size="30px" maxlength="50" name="FirstName" required readonly value="NAmrata"  id ="FirstName" onblur="return FNameValidate()"></td>
+			</tr>
+			<tr>
+				<td class="fieldName">Last Name:</td>
+			</tr>
+			<tr>
+				<td class="inputCol"><input type="text" size="30px" maxlength="50" name="LastName" required readonly value="Agarwal" id="LastName"  onblur="return LNameValidate()"></td>
+			</tr>
+			<tr>
+				<td class="fieldName">Email Id:</td>
+			</tr>
+            <tr>
+				<td class="inputCol"><input type="email" size="30px" maxlength="50" name="email" required readonly value="namrata@gmail.com" id="Email" onblur="return validateEmail()"></td>
+			</tr>
+			<tr>
+				<td class="fieldName">Contact Number:</td>
+			</tr>
+			<tr>
+				<td class="inputCol"><input type="tel" size="30px" maxlength="50" name="Contact" required readonly value="9876543210" id="number"onblur="return ContatctNumberValidate()"></td>
+			</tr>
+			<tr>
+				<td class="fieldName" >Company</td>
+			</tr>
+			<tr>
+				<td>
+					<select name="Company" >
+						<option value="Metacube" readonly>Metacube</option>
+						<option value="TCS">TCS</option>
+						<option value="Wipro">Wipro</option>
+						<option value="Infosys">Infosys</option>
+					</select>
+				</td>
+			</tr>
+            <tr>
+                <td colspan=2><input type="button" value="User Info"> <input type="button" value="Edit Info" id="edit" onclick="return editCheck()"></td>
+            </tr>
+		</table>
+	</form>   
+</body>
+</html>

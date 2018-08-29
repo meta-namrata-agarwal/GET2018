@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML Assignment Session1</title>	
+<link rel="stylesheet"  href="SignUpCSS.css">	
+<style>
+    textarea{
+        height:28px;
+        border-radius:8px;
+        padding-left:5px;
+        font-family:Comic Sans MS;
+        border: 2px solid black;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+	<table  id="header" width ="100%" align = "center">
+		<tr>
+			<td><img src="htmlLogo.png" width= "100px"/></td>
+			<td  width = "520px">
+				<a href= "home.html">Home</a>
+				<a href= "about.html">About</a>
+				<a href= "gallery.html">Gallery</a>
+				<a href= "product.html">Product</a>
+				<a href= "contact.html">Contact</a>
+				<a href= "SignUp.html">Sign Up</a>
+				<a href= "LogIn.html">Log In</a>
+			</td>
+		</tr>
+	</table>
+	<hr/>
+	<br>	
+	<p align="center">
+		<img src="contact_us_banner1.jpg" width= "55%"/>
+	</p>
+	<form>
+		<table align="center">
+			<tr>
+				<td class="fieldName">Name </td>
+				<td><input type="text" name="name" maxlength="50"><br></td>
+			</tr>
+			<tr>
+				<td class="fieldName">Email</td>
+				<td><input type="email" name="email"  maxlength="50"><br></td>
+			</tr>
+			<tr>
+				<td class="fieldName">City</td>
+				<td>
+					<select name="city">
+						<option value="JAIPUR">JAIPUR</option>
+						<option value="DELHI">DELHI</option>
+						<option value="KOLKATA">KOLKATA</option>
+						<option value="MUMBAI">MUMBAI</option>
+					</select>
+				<br>
+				</td>
+			</tr>
+			<tr>
+				<td class="fieldName">Organization<br>Name</td>
+				<td><input type="text" name="organization name" maxlength="50"><br></td>
+			</tr>
+			<tr>
+				<td class="fieldName">Contact<br> Number</td>
+				<td><input type="tel" name="contact number"  maxlength="13"><br></td>
+			</tr>
+			<tr>
+				<td class="fieldName">Message</td>
+				<td><textarea rows="2" cols="25" name="message"></textarea></td>
+			</tr>	
+			<tr>
+				<td><input type="Submit"  value="Submit"></td>
+			</tr>
+		</table>
+	</form>
+	<hr>
+	<table align="center">
+		<tr>
+			<td   style="font-family:Comic Sans MS" size="5"> &copy; Copyright 2018-17 | All Rights Reserved | Metacube Training</td>
+		</tr>
+	</table>
+</body>
+</html>
