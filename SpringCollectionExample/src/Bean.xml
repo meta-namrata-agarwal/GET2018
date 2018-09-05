@@ -1,0 +1,42 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="collection" class="com.metacube.training.collection.CollectionEntity">
+		
+	<property name="nameList">
+		<list>
+			<value>Namrata</value>
+			<value>Pratiksha</value>
+			<value>Namrata</value>
+			<value>Tanu</value>
+			<value>Jai</value>
+		</list>
+	</property>
+	
+	
+	<property name="nameSet">
+		<set>
+			<value>Namrata</value>
+			<value>Pratiksha</value>
+			<value>Namrata</value>
+			<value>Tanu</value>
+			<value>Jai</value>
+		</set>
+	</property>
+
+<property name="nameMap">
+	<map>
+		<entry key="1" value="namrata"/>
+		<entry key="2" value="jai"/>
+		<entry key="3" value="pratiksha"/>
+		<entry key="4" value="niraj"/>
+		<entry key="5" value="jai"/>
+	</map>
+</property>
+</bean>
+	
+</beans>
