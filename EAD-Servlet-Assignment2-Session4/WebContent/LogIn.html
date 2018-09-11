@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>LogIn</title>
+<link rel="stylesheet" href="session4.css">
+</head>
+
+<body>
+	<table id="header" width="100%" align="center">
+		<tr>
+			<td><img src="metacube.png" width="200px" /></td>
+			<td width="520px" align=right><a href="home.html">Home |</a> <a
+				href="about.html">About |</a> <a href="contact.html">Contact |</a> <a
+				href="Registration.html">Sign Up |</a> <a href="LogIn.html">Log
+					In </a></td>
+		</tr>
+	</table>
+	<br />
+	<form id="SignUpForm" action="LoginVALIDATIONServlet" method="post">
+		<table width="30%" align="center">
+			<tr>
+				<td><h1>Log In!</h1></td>
+			</tr>
+			<tr>
+				<td align="left">Email Id:</td>
+			</tr>
+			<td><input type="email" size="30px" name="email" id="Email"
+				maxlength="50"required "></td>
+			<tr>
+				<td align="left">Password:</td>
+			</tr>
+			<tr>
+				<td><input type="password" id="password" name="password"
+					size="30px" required maxlength="50"></td>
+			</tr>
+			<tr>
+				<td width="50%"><input type="Submit" value="LogIn"></td>
+				<td width="50%" id="anForgot"><a href="IndexPage.html">Forgot
+						Password?</a></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
