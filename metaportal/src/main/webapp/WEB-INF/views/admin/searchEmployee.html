@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>Edit skill Details</title>
+
+</head>
+<body>
+	<div>
+		<form th:object="${employee}" th:action="@{../Employees}" method="post">
+			 <label>Enter name ti search</label> 
+			 <input type="text" th:field="*{firstName}" /> 
+			<button type="submit" class="btn btn-primary">search</button>
+
+		</form>
+	</div>
+</body>
+</html>
