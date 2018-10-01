@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StrokeCircle</title>
+</head>
+
+<body>
+    <canvas id="circle" width="100" height="100"> </canvas>
+    <script>
+        var cir = document.getElementById("circle");
+        var ctx = cir.getContext("2d");
+        ctx.arc(50, 50, 50, 0, 2 * Math.PI);
+        ctx.fillStyle = "#fcb03c";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(50, 10);
+        ctx.lineTo(50, 90);
+        ctx.lineWidth = "10";
+        ctx.strokeStyle = "#fff";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(10, 50);
+        ctx.lineTo(90, 50);
+        ctx.lineWidth = "10";
+        ctx.strokeStyle = "#fff";
+        ctx.stroke();
+
+    </script>
+</body>
+
+</html>

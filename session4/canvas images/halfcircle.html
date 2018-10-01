@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Circle</title>
+</head>
+
+<body>
+    <canvas id="circle" width="100" height="100"> </canvas>
+    <script>
+        var cir = document.getElementById("circle");
+        var ctx = cir.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(50, 50, 50, 0.5 * Math.PI, 1.5 * Math.PI);
+        ctx.fillStyle = "#2d94d4";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(50, 50, 45, 1.5 * Math.PI, 0.5 * Math.PI);
+        ctx.strokeStyle = "#91a5b6";
+        ctx.lineWidth = "10";
+        ctx.stroke();
+
+    </script>
+</body>
+
+</html>
