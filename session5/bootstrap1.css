@@ -1,0 +1,40 @@
+* {
+    border: 0px solid black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
+
+}
+
+#head-center {
+    font-size: 2.25rem;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
+}
+
+header {
+    line-height: 2;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#title {
+    font-size: 2.5rem;
+}
+
+#pagination {
+    margin-top: 4rem;
+    margin-bottom: 2rem
+}
+
+#pagination .btn {
+    border-radius: 2rem;
+}
+
+.blog-footer {
+    text-align: center;
+}
