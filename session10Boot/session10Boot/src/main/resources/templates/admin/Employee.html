@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Employees</title>
+    
+</head>
+<body>
+<div class="container">
+ 	
+    <div th:if="${not #lists.isEmpty(Employees)}">
+        <h2>All employees</h2>
+       
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>DOB	</th>
+                <th>Gender</th>
+                <th>Primary Contact</th>
+                <th>emailId</th>
+                <th>password</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                <th>ADD job details</th>
+            </tr>
+            <tr th:each="employee : ${Employees}">
+                <td th:text="${employee.empCode}">Id</td>
+                <td th:text="${employee.firstName}">First Name</td>
+                <td th:text="${employee.lastName}">Last Name</td>
+                <td th:text="${employee.dob}">DOB</td>
+                <td th:text="${employee.gender}">Gender</td>
+       <!--      <td th:text="${employee.primaryContact}">PrimaryContact</td> -->
+                <td th:text="${employee.emailId}">emailId</td>
+                <td th:text="${employee.password}">password</td>
+                <td><a th:href="${'Employees/edit?id=' + employee.empCode}" class="btn btn-default">Edit</a></td>
+                <td><a th:href="${'Employees/delete?id=' + employee.empCode}" class="btn btn-danger">Delete</a></td>
+                 <td><a th:href="${'Employees/addJobDetails?id=' + employee.empCode}" class="btn btn-default">ADD job Details</a></td>
+            </tr>
+            <tr><a th:href="${'Employees/add'}" class="btn btn-new">Add</a>
+            </tr>
+           <tr><a th:href="${'Employees/Search'}" class="btn btn-new">Search Employee</a></tr>  -->
+        </table>
+    </div>
+    
+</div>
+</body>
+</html>
