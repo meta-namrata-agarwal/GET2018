@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Submitted Form </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="form.css">
+    <script src="addElement.js"></script>
+
+</head>
+
+<body>
+    <div id="container">
+        <h2>Thank You for Registering with us!</h2>
+        <form method="post" id="form">
+            <div id="fields">
+                <div class="input-container">
+                    <label>First Name</label>
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" id="firstname">
+                </div>
+                <div class="input-container">
+                    <label>Last Name</label>
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" id="lastname">
+                </div>
+
+                <div class="input-container">
+                    <label>Email</label>
+                    <i class="fas fa-envelope icon"></i>
+                    <input type="email" id="email">
+                </div>
+
+                <div class="input-container">
+                    <label>Phone #</label>
+                    <i class="fas fa-phone icon"></i>
+                    <input type="tel" id="phone">
+                </div>
+
+                <div class="input-container" id="addressdiv">
+                    <label>Address</label>
+                    <i class="fas fa-home icon"></i>
+                    <input type="text" id="address">
+                </div>
+
+                <div class="input-container" id="citydiv">
+                    <label>City</label>
+                    <i class="fas fa-home icon"></i>
+                    <input type="text" id="city">
+                </div>
+
+                <div class="input-container">
+                    <label>State</label>
+                    <i class="fas fa-list icon"></i>
+                    <input type="text" id="state">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        var first = document.getElementById("firstname");
+        var last = document.getElementById("lastname");
+        var phone = document.getElementById("phone");
+        var email = document.getElementById("email");
+        var address = document.getElementById("address");
+        var city = document.getElementById("city");
+        var state = document.getElementById("state");
+
+        first.value = localStorage.getItem("firstname");
+        last.value = localStorage.getItem("lastname");
+        phone.value = localStorage.getItem("phone");
+        email.value = localStorage.getItem("email");
+        address.value = localStorage.getItem("address");
+        city.value = localStorage.getItem("city");
+        state.value = localStorage.getItem("state");
+        if (state.value === "Rajasthan") {
+            var webvalue = localStorage.getItem("website");
+            if (webvalue != "") {
+                addWebsite();
+                var website = document.getElementById("website");
+                website.value = webvalue;
+                website.readOnly = true;
+            }
+            addProject();
+            var project = document.getElementById("project");
+            project.value = localStorage.getItem("project");
+            project.readOnly = true;
+
+        }
+        if (state.value === "Maharashtra") {
+            addZipCode();
+            addProject();
+            var project = document.getElementById("project");
+            var zipcode = document.getElementById("zipcode");
+            zipcode.value = localStorage.getItem("zipcode");
+            project.value = localStorage.getItem("project");
+            zipcode.readOnly = true;
+            project.readOnly = true;
+        }
+        if (state.value === "Haryana") {
+            addZipCode();
+            var z = document.createElement("div");
+            var label = document.createElement("label");
+            var hosting = document.createTextNode("Do you have hosting");
+            var input = document.createElement("input");
+            z.setAttribute("class", "input-container");
+
+            z.appendChild(label);
+            z.appendChild(input);
+            label.appendChild(hosting);
+            input.name = "hosting";
+            input.id = "hosting";
+            document.getElementById("fields").appendChild(z);
+            var zipcode = document.getElementById("zipcode");
+            var hosting = document.getElementById("hosting");
+            zipcode.value = localStorage.getItem("zipcode");
+            hosting.value = localStorage.getItem("hosting");
+            zipcode.readOnly = true;
+            hosting.readOnly = true;
+            console.log(hosting.value);
+        }
+
+        if (address.value == "") {
+            var element = document.getElementById("addressdiv");
+            element.parentNode.removeChild(element);
+            address.readOnly = true;
+        }
+        if (city.value == "") {
+            var element = document.getElementById("citydiv");
+            element.parentNode.removeChild(element);
+            city.readOnly = true;
+        }
+        first.readOnly = true;
+        last.readOnly = true;
+        phone.readOnly = true;
+        email.readOnly = true;
+        state.readOnly = true;
+
+    </script>
+</body>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="form.css">
+    <script src="validation.js"></script>
+    <script src="addElement.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <h2>Contact Us Today!</h2>
+        <form action="output.html" method="post" id="form">
+            <div id="fields">
+                <div class="input-container">
+                    <label>First Name</label>
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" placeholder="First Name" id="firstname">
+                </div>
+
+                <div class="input-container">
+                    <label>Last Name</label>
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" placeholder="Last Name" id="lastname">
+                </div>
+
+                <div class="input-container">
+                    <label>Email</label>
+                    <i class="fas fa-envelope icon"></i>
+                    <input type="email" placeholder="E-Mail Address" id="email">
+                </div>
+
+                <div class="input-container">
+                    <label>Phone #</label>
+                    <i class="fas fa-phone icon"></i>
+                    <input type="tel" placeholder="(845)555-1212" id="phone">
+                </div>
+
+                <div class="input-container" id="addressdiv">
+                    <label>Address</label>
+                    <i class="fas fa-home icon"></i>
+                    <input type="text" placeholder="Address" id="address">
+                </div>
+
+                <div class="input-container" id="citydiv">
+                    <label>City</label>
+                    <i class="fas fa-home icon"></i>
+                    <input type="text" placeholder="City" id="city">
+                </div>
+
+                <div class="input-container">
+                    <label>State</label>
+                    <i class="fas fa-list icon"></i>
+                    <select name="state" id="state" required onclick="myfunction()">
+                        <option value="" selected disabled hidden>Please select your state</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Haryana">Haryana</option>
+                    </select>
+                </div>
+            </div>
+            <div id="buttonField">
+                <button type="submit" value="Send" onclick="return validateSubmit()">Send<i class="fas fa-location-arrow"></i></button>
+            </div>
+        </form>
+    </div>
+</body>
