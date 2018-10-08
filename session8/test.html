@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<title>JS TEST FILE</title>
+<script src="singleLL.js"></script>
+<script src="stack.js"></script>
+<script src="queue.js"></script>
+<script src="repeatify.js"></script>
+<script src="doubleLL.js"></script>
+<script src="consecutive.js"></script>
+
+</html>
+
+<body>
+    <script>
+        //queu1 single
+        link = new SinglyList();
+        link.add(10);
+        link.add(20);
+        link.add(30);
+        link.add(40);
+        console.log(link);
+
+        //ques 1 dpublyLL
+        double = new DoublyList();
+        double.add(10);
+        double.add(20);
+        double.add(30);
+        double.add(40);
+        console.log(double);
+        double.remove(2);
+        console.log(double);
+
+        //ques3
+        stack = new Stack();
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        stack.push(40);
+        console.log(stack);
+        stack.pop();
+        console.log(stack);
+
+        //ques4
+        queue = new Queue();
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.enqueue(40);
+        console.log(queue);
+        queue.dequeue();
+        console.log(queue);
+
+        //ques5
+        console.log("hello".repeatify(3));
+
+        console.log(removeConsecutiveCharacter("eeeabcddcbfgf"));
+
+    </script>
+</body>
