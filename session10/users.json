@@ -1,0 +1,27 @@
+[
+    {
+        "id": "1",
+        "name": "Namrata Agarwal",
+        "phone": "8239370519",
+        "address": "Jaipur"
+    },
+    {
+        "id": "2",
+        "name": "Jai Garg",
+        "phone": "8239370519",
+        "address": "Jaipur"
+    }
+    ,
+    {
+        "id": "3",
+        "name": "Pratiksha Jain",
+        "phone": "8239370519",
+        "address": "Jaipur"
+    },
+    {
+        "id": "4",
+        "name": "Tanu Mittal",
+        "phone": "8239370519",
+        "address": "Jaipur"
+    }
+]

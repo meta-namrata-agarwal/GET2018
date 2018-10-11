@@ -1,0 +1,24 @@
+header {
+    background-color: #8ed0ea;
+    border: 2px solid blue;
+}
+
+* {
+    border: 0px solid black;
+}
+
+#dialogue-header {
+    background-color: #8ed0ea;
+    border: 1px solid gainsboro;
+}
+
+a {
+    background-color: skyblue;
+    padding: 5px;
+    color: white;
+    border-radius: 50%;
+}
+
+#searchInput {
+    width: 97%;
+}
