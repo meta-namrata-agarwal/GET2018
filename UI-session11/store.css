@@ -1,0 +1,11 @@
+aside a:active {
+    color: black;
+    background-color: #1C6FFB;
+    /*    color: black;*/
+}
+
+#badge {
+    padding: 4px;
+    border-radius: 50%;
+    background-color: darkorange;
+}
