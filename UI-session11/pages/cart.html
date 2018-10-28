@@ -1,0 +1,42 @@
+<div ng-controller="cartController">
+    <h2>Shopping Cart</h2>
+    <div class="row">
+        <div class="col-9 border">
+            <div class="clearfix">
+                <div class=" float-left">
+                    <h4>You have {{itemCount}} items in shopping cart</h4>
+                </div>
+                <div class="float-right">
+                    <button class="btn btn-danger" ng-click="deleteAll()"><a>Clear Shopping Cart</a></button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-3 text-center"></div>
+                <div class="col-3">Product</div>
+                <div class="col-4 text-center">Quantity</div>
+                <div class="col-2 text-right">Price </div>
+            </div>
+            <div class="row border py-2 text-muted" ng-repeat="item in cartItem">
+                <div class="col-3  text-center">
+                    <img style="height:4rem;" class="rounded-circle" src={{item.image}} alt="Spinach">
+                </div>
+                <div class="col-3 ">
+                    <span>{{item.name}}</span>
+                </div>
+                <div class="col-4 text-center">
+                    <button ng-click="addQuantityToCart(item)"> + </button>
+                    <span>{{item.quantity}} in cart</span>
+                    <button ng-click="removeQuantity(item)"> - </button>
+                </div>
+                <div class="col-2 text-right">
+                    <span>${{item.price*item.quantity}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-right">${{totalPrice}}</div>
+            </div>
+            <button class="btn btn-primary" ng-hide="itemCount==0"><a href="#!/check-out" style="color: white">CheckOut</a></button>
+        </div>
+    </div>
+</div>

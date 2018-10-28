@@ -1,0 +1,40 @@
+<div ng-controller="checkOutController">
+    <div>
+        <h3 class="pl-5">Shipping</h3>
+        <div class="row">
+            <div class="col-6">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control form-control-sm" readonly ng-model="userName">
+                    </div>
+                    <div class="form-group">
+                        <label for="Address">Address:</label>
+                        <input type="password" class="form-control form-control-sm mb-4" name="addLine1" placeholder="Line1">
+                        <input type="password" class="form-control form-control-sm " placeholder="Line2">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" name="city" class="form-control form-control-sm">
+                    </div>
+                    <button type="submit" class="btn btn-primary"><a href="#!/order-success" style="color: white">Place Order</a></button>
+                </form>
+            </div>
+            <div class="col-6 mt-3">
+                <div class="border rounded pl-2">
+                    <h4>Order Summary</h4>
+                    <p>You have {{itemCount}} items in your cart</p>
+                    <hr>
+                    <div class="row px-4" ng-repeat="item in cartItem">
+                        <div class="col-6"> {{item.quantity}} x {{item.name}}</div>
+                        <div class="col-6 text-right">${{item.price*item.quantity}}</div>
+                    </div>
+                    <div class="row px-4">
+                        <div class="col-6"><strong>Total</strong></div>
+                        <div class="col-6 text-right"><strong>${{totalPrice}}</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

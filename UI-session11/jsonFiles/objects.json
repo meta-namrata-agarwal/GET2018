@@ -1,0 +1,219 @@
+{
+  "carts": [],
+  "items": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "price": 80,
+      "description": "sample description",
+      "image": "images/apple.jpg",
+      "category": "Fruits"
+    },
+    {
+      "id": "2",
+      "name": "Banana",
+      "price": 40,
+      "description": "sample description",
+      "image": "images/banana.jpg",
+      "category": "Fruits"
+    },
+    {
+      "id": "3",
+      "name": "Banana Bread",
+      "price": 190,
+      "description": "sample description",
+      "image": "images/Banana_Bread.jpg",
+      "category": "Bread"
+    },
+    {
+      "id": "4",
+      "name": "Basil",
+      "price": 300,
+      "description": "sample description",
+      "image": "images/basil.jpg",
+      "category": "Seasonings and Spices"
+    },
+    {
+      "id": "5",
+      "name": "Bay Leaves",
+      "price": 450,
+      "description": "sample description",
+      "image": "images/bay_leaves.jpg",
+      "category": "Seasonings and Spices"
+    },
+    {
+      "id": "6",
+      "name": "Breadstick",
+      "price": 80,
+      "description": "sample description",
+      "image": "images/breadstick.jpeg",
+      "category": "Bread"
+    },
+    {
+      "id": "7",
+      "name": "Brown Bread",
+      "price": 100,
+      "description": "sample description",
+      "image": "images/brown_bread.jpg",
+      "category": "Bread"
+    },
+    {
+      "id": "8",
+      "name": "Bun",
+      "price": 80,
+      "description": "sample description",
+      "image": "images/bun.jpg",
+      "category": "Bread"
+    },
+    {
+      "id": "9",
+      "name": "Butter",
+      "price": 50,
+      "description": "sample description",
+      "image": "images/butter.jpg",
+      "category": "Dairy"
+    },
+    {
+      "id": "10",
+      "name": "Cardamon",
+      "price": 200,
+      "description": "sample description",
+      "image": "images/cardamon.jpg",
+      "category": "Seasonings and Spices"
+    },
+    {
+      "id": "11",
+      "name": "Cheese",
+      "price": 80,
+      "description": "sample description",
+      "image": "images/cheese.jpg",
+      "category": "Dairy"
+    },
+    {
+      "id": "12",
+      "name": "Clove",
+      "price": 90,
+      "description": "sample description",
+      "image": "images/clove.jpg",
+      "category": "Seasonings and Spices"
+    },
+    {
+      "id": "13",
+      "name": "Fennel",
+      "price": 150,
+      "description": "sample description",
+      "image": "images/fennel.jpg",
+      "category": "Seasonings and Spices"
+    },
+    {
+      "id": "14",
+      "name": "Green Peas",
+      "price": 60,
+      "description": "sample description",
+      "image": "images/green_peas.jpg",
+      "category": "Vegetables"
+    },
+    {
+      "id": "15",
+      "name": "Mango",
+      "price": 80,
+      "description": "sample description",
+      "image": "images/mango.jpg",
+      "category": "Fruits"
+    },
+    {
+      "id": "16",
+      "name": "Milk",
+      "price": 50,
+      "description": "sample description",
+      "image": "images/milk.jpg",
+      "category": "Dairy"
+    },
+    {
+      "id": "17",
+      "name": "Onion",
+      "price": 40,
+      "description": "sample description",
+      "image": "images/onion.jpg",
+      "category": "Vegetables"
+    },
+    {
+      "id": "18",
+      "name": "Orange",
+      "price": 60,
+      "description": "sample description",
+      "image": "images/orange.jpg",
+      "category": "Fruits"
+    },
+    {
+      "id": "19",
+      "name": "Pineapple",
+      "price": 100,
+      "description": "sample description",
+      "image": "images/pineapple.jpg",
+      "category": "Fruits"
+    },
+    {
+      "id": "20",
+      "name": "Potato",
+      "price": 30,
+      "description": "sample description",
+      "image": "images/potato.jpg",
+      "category": "Vegetables"
+    },
+    {
+      "id": "21",
+      "name": "Spinach",
+      "price": 50,
+      "description": "sample description",
+      "image": "images/spinach.jpg",
+      "category": "Vegetables"
+    },
+    {
+      "id": "22",
+      "name": "Tomato",
+      "price": 50,
+      "description": "sample description",
+      "image": "images/tomato.jpeg",
+      "category": "Vegetables"
+    },
+    {
+      "id": "23",
+      "name": "White Bread",
+      "price": 70,
+      "description": "sample description",
+      "image": "images/white_bread.jpg",
+      "category": "Bread"
+    },
+    {
+      "id": "24",
+      "name": "Yogurt",
+      "price": 40,
+      "description": "sample description",
+      "image": "images/yogurt.jpg",
+      "category": "Dairy"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Bread"
+    },
+    {
+      "id": 2,
+      "name": "Dairy"
+    },
+    {
+      "id": 3,
+      "name": "Fruits"
+    },
+    {
+      "id": 4,
+      "name": "Vegetables"
+    },
+    {
+      "id": 5,
+      "name": "Seasonings and Spices"
+    }
+  ]
+}
